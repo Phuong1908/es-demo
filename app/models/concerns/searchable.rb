@@ -14,7 +14,16 @@ module Searchable
 
     def self.search(query)
       # build and run search
-      self.__elasticsearch__.search(query)
+      params = {
+        query: {
+          multi_match: {
+            query: query, 
+            fields: [ :title, :artist, :lyrics ] 
+          },
+        },
+      }
+
+      self.__elasticsearch__.search(params)
     end
   end
 end
