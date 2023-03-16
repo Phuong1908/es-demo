@@ -76,6 +76,7 @@ GEM
       activesupport (> 3)
       elasticsearch (~> 7)
       hashie
+    elasticsearch-rails (7.2.1)
     elasticsearch-transport (7.17.7)
       faraday (~> 1)
       multi_json
@@ -198,20 +199,22 @@ GEM
 
 PLATFORMS
   -darwin-21
+  arm64-darwin-21
 
 DEPENDENCIES
   bootsnap (>= 1.4.4)
   byebug
   elasticsearch-model
+  elasticsearch-rails
   listen (~> 3.3)
   pg (~> 1.1)
   puma (~> 5.0)
-  rails (~> 6.1.7, >= 6.1.7.3)
+  rails
   spring
   tzinfo-data
 
 RUBY VERSION
-   ruby 2.6.6p146
+   ruby 3.2.0p0
 
 BUNDLED WITH
    2.3.26
